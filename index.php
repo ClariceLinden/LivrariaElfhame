@@ -12,7 +12,6 @@ include_once './includes/_banco.php';
         
     <?php
     $sql = "SELECT * FROM produtos WHERE ativo = 1 LIMIT 3";
-    $exec = mysqli_query($conn,$sql);
     $contar = mysqli_num_rows($exec);
     while ($dados = mysqli_fetch_assoc($exec)){
       echo '<h1>'.$dados['Nome'].'</h1>';
